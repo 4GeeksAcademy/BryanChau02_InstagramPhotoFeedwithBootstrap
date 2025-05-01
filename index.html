@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Instagram Photo Feed with Bootstrap</title>
+</head>
+<body class="bg-black">
+    <div class="whole w-75 mx-auto bg-white">
+        <div class="Header bg-light d-flex p-3">
+            <i class="fa-brands fa-instagram fa-2x ms-5"></i>
+            <h4>Instagram</h4>
+            <button 
+            type="button" 
+            class="btn btn-success ms-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#createPostModal">
+                Create a new post
+            </button>
+
+            <div class="modal fade" id="createPostModal" aria-labelledby="createPostLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content mb-auto">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="createPostLabel">Create a new post</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <label for="caption" class="form-label">Caption:</label>
+                      <textarea id="caption" class="form-control mb-3" rows="3" placeholder="Add the caption of your post here"></textarea>
+                      <div class="d-flex gap-2">
+                        <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-camera"></i></button>
+                        <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-map-marker-alt"></i></button>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-success">Publish</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                    <i class="fa-solid fa-gear"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-lg-end">
+                    <li><button class="dropdown-item" type="button">Profile</button></li>
+                  <li><button class="dropdown-item" type="button">Privacy</button></li>
+                  <li><button class="dropdown-item" type="button">Accesibility</button></li>
+                  <li><button class="dropdown-item" type="button">Privacy and Data</button></li>
+                  <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                </ul>
+              </div>
+        </div>
+        <ul class="nav nav-tabs bg-white justify-content-center p-2 pb-0" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" 
+              aria-current="page" 
+              href="#grid" 
+              id="grid-tab" 
+              role="tab" 
+              aria-controls="grid" 
+              aria-selected="true" 
+              data-bs-toggle="tab">
+                <i class="fa-solid fa-table-cells"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" 
+              href="#single"
+              style="color: #122c97;" 
+              id="single-tab" 
+              data-bs-toggle="tab" 
+              role="tab" 
+              aria-controls="single" 
+              aria-selected="false">
+              <i class="fa-solid fa-square"></i></a>
+            </li>
+          </ul>
+          <div class="tab-content mt-3 bg-white">
+            <div
+              class="tab-pane fade show active"
+              id="grid"
+              role="tabpanel"
+              aria-labelledby="grid-tab">
+              <div class="row row-cols-3 g-2">
+                <div class="col">
+                    <div class="ratio ratio-1x1">
+                <img src="Mount-Everest.webp" class="img-fluid object-fit-cover">
+                    </div>
+                </div>
+                    <div class="col">
+                        <div class="ratio ratio-1x1">
+                        <img src="flowers.webp" class="img-fluid object-fit-cover">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="ratio ratio-1x1">
+                            <img src="dog.avif" class="img-fluid object-fit-cover">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="ratio ratio-1x1">
+                            <img src="cat.jpg" class="img-fluid object-fit-cover">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="ratio ratio-1x1">
+                            <img src="ppl.jpg" class="img-fluid object-fit-cover">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="ratio ratio-1x1">
+                            <img src="senna.jpg" class="img-fluid object-fit-cover">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="ratio ratio-1x1">
+                            <img src="gtr.webp" class="wimg-fluid object-fit-cover">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="ratio ratio-1x1">
+                            <img src="football.jpg" class="img-fluid object-fit-cover">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="ratio ratio-1x1">
+                            <img src="steph.jpg" class="img-fluid object-fit-cover">
+                        </div>
+                    </div>
+            </div>
+            </div>
+        </div>
+            <div
+              class="tab-pane fade"
+              id="single"
+              role="tabpanel"
+              aria-labelledby="single-tab">
+              <div class="d-flex flex-column align-items-center gap-4 py-3">
+                <div class="card w-50">
+                  <div class="card-header d-flex justify-content-between p-3 bg-white">
+                    <h4><span>Beautiful Everest!</span></h4>
+                    <small>07/14</small>
+                  </div>
+                  <img src="Mount-Everest.webp" class="card-img-top">
+                  <div class="card-body">
+                    <p class="mb-1"><strong>100,000 likes</strong></p>
+                    <p>
+                      This is a beautiful photo of Mount Everest taken from the foot of the mountain
+                    </p>
+                  </div>
+                </div>
+    
+                <div class="card w-50">
+                  <div class="card-header d-flex justify-content-between p-3 bg-white">
+                    <h4><span>Colorful Garden!</span></h4>
+                    <small>04/12</small>
+                  </div>
+                  <img src="flowers.webp" class="card-img-top">
+                  <div class="card-body">
+                    <p class="mb-1"><strong>300,000 likes</strong></p>
+                    <p>
+                      What a spectacular garden!
+                    </p>
+                  </div>
+                </div>
+
+                <div class="card w-50">
+                  <div class="card-header d-flex justify-content-between p-3 bg-white">
+                    <h4><span>Cute Dog</span></h4>
+                    <small>01/23</small>
+                  </div>
+                  <img src="dog.avif" class="card-img-top">
+                  <div class="card-body">
+                    <p class="mb-1"><strong>1,000,000 likes</strong></p>
+                    <p>
+                      Adorable puppy running
+                    </p>
+                  </div>
+                </div>
+
+                <div class="card w-50">
+                  <div class="card-header d-flex justify-content-between p-3 bg-white">
+                    <h4><span>Chill Cat</span></h4>
+                    <small>03/06</small>
+                  </div>
+                  <img src="cat.jpg" class="card-img-top">
+                  <div class="card-body">
+                    <p class="mb-1"><strong>1,020,000 likes</strong></p>
+                    <p>
+                      Tabi just chilling...
+                    </p>
+                  </div>
+                </div>
+
+                <div class="card w-50">
+                  <div class="card-header d-flex justify-content-between p-3 bg-white">
+                    <h4><span>Vacation Time!</span></h4>
+                    <small>05/20</small>
+                  </div>
+                  <img src="ppl.jpg" class="card-img-top">
+                  <div class="card-body">
+                    <p class="mb-1"><strong>500,000 likes</strong></p>
+                    <p>
+                      Enjoying the week away with my wife!
+                    </p>
+                  </div>
+                </div>
+
+                <div class="card w-50">
+                  <div class="card-header d-flex justify-content-between p-3 bg-white">
+                    <h4><span>Senna Acquired!</span></h4>
+                    <small>06/21</small>
+                  </div>
+                  <img src="senna.jpg" class="card-img-top">
+                  <div class="card-body">
+                    <p class="mb-1"><strong>10,000,000 likes</strong></p>
+                    <p>
+                      Just got in!
+                    </p>
+                  </div>
+                </div>
+
+                <div class="card w-50">
+                  <div class="card-header d-flex justify-content-between p-3 bg-white">
+                    <h4><span>Who wants a ride?</span></h4>
+                    <small>07/13</small>
+                  </div>
+                  <img src="gtr.webp" class="card-img-top">
+                  <div class="card-body">
+                    <p class="mb-1"><strong>8,000,000 likes</strong></p>
+                    <p>
+                      Nissan gifted me this beauty :)
+                    </p>
+                  </div>
+                </div>
+
+                <div class="card w-50">
+                  <div class="card-header d-flex justify-content-between p-3 bg-white">
+                    <h4><span>Throwback!</span></h4>
+                    <small>09/30</small>
+                  </div>
+                  <img src="football.jpg" class="card-img-top">
+                  <div class="card-body">
+                    <p class="mb-1"><strong>300,000 likes</strong></p>
+                    <p>
+                      High School days.....
+                    </p>
+                  </div>
+                </div>
+
+                <div class="card w-50">
+                  <div class="card-header d-flex justify-content-between p-3 bg-white">
+                    <h4><span>Stephen Curry continues to play his best</span></h4>
+                    <small>06/05</small>
+                  </div>
+                  <img src="steph.jpg" class="card-img-top">
+                  <div class="card-body">
+                    <p class="mb-1"><strong>15,000,000 likes</strong></p>
+                    <p>
+                      Steph in action!
+                    </p>
+                  </div>
+                </div>
+
+        </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
+</html>
